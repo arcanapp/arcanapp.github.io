@@ -1,180 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dr. Rudra Jani - Rehabilitation Psychologist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcana Solutions</title>
 
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Cinzel:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-        nav {
-            background-color: #00897b;
-        }
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
-        nav .brand-logo {
-            font-size: 1.8rem;
-        }
+  <style>
+    /* Apply background color to both HTML and Body */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #6a236b; /* Dark Purple background */
+      font-family: 'Merriweather', serif; /* Default font for text */
+    }
 
-        header {
-            background: url('https://via.placeholder.com/1920x400') no-repeat center center;
-            background-size: cover;
-            color: #fff;
-            padding: 60px 0;
-            text-align: center;
-        }
+    /* Main content container */
+    .main-container {
+      padding: 40px;
+      background-color: #ffffff; /* White background for content */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 40px;
+      color: #bf9b30; /* Warm Gold for text */
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
+    /* Title Section */
+    .section-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #bf9b30; /* Gold color for the title */
+      font-family: 'Cinzel', serif; /* Elegant, mystical font for titles */
+    }
 
-        header p {
-            font-size: 1.2rem;
-        }
+    /* Service Card Styles */
+    .service-card {
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    }
 
-        section {
-            padding: 40px 0;
-        }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Card lift effect on hover */
+    }
 
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #00897b;
-        }
+    .card-title {
+      color: #bf9b30; /* Gold color for card titles */
+      font-family: 'Cinzel', serif; /* Mystical font for card titles */
+    }
 
-        .card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .card-content {
+      color: #bf9b30; /* Gold color for card content */
+    }
 
-        .card .card-title {
-            font-size: 1.5rem;
-            color: #00897b;
-        }
+    /* Footer Styles */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #6a236b; /* Dark Purple footer background */
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      font-family: 'Poppins', sans-serif; /* Modern font for footer */
+    }
 
-        .collection .collection-item {
-            display: flex;
-            align-items: center;
-        }
+    .footer p {
+      margin: 0;
+    }
 
-        .collection .collection-item i {
-            margin-right: 10px;
-            color: #00897b;
-        }
+    /* Button Styles */
+    .btn {
+      background-color: #bf9b30; /* Gold button */
+      font-family: 'Poppins', sans-serif; /* Modern, clean font for buttons */
+    }
 
-        footer {
-            background-color: #00897b;
-            color: #fff;
-            padding: 20px 0;
-        }
+    .btn:hover {
+      background-color: #9a7b26; /* Darker gold on hover */
+    }
 
-        footer p {
-            margin: 0;
-        }
+    /* WhatsApp Floating Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366; /* WhatsApp Green color */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
-        footer .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-    </style>
+    .whatsapp-btn:hover {
+      background-color: #128c7e; /* Darker shade of WhatsApp Green */
+    }
+
+    /* Animate content on page load */
+    .main-container {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper teal lighten-2">
-            <a href="#" class="brand-logo center">Dr. Rudra Jani</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header class="header">
-        <div class="container">
-            <h1>Welcome to Dr. Rudra Jani's Rehabilitation Psychology Services</h1>
-            <p class="flow-text">Providing specialized psychological assessment and therapy for children and adults.</p>
-        </div>
-    </header>
-    <section id="about" class="container">
-        <h2>About Dr. Rudra Jani</h2>
-        <p>Dr. Rudra Jani is a Rehabilitation Psychologist holding a PGDRP from BM Institute, Ahmedabad. Dr. Jani specializes in providing psychological assessment and therapy for children with special needs, cognitive behavioral therapy (CBT), and career counseling. Counseling services are also available for the adult population.</p>
-    </section>
-    <section id="services" class="container">
-        <h2>Our Services</h2>
+
+  <!-- Main content container -->
+  <div class="container main-container">
+    <div class="row">
+      <div class="col s12">
+        <!-- Title Section -->
+        <h2 class="section-title center-align">Arcana Solutions</h2>
+        <p class="center-align">A subsidiary of Manoveda Wellness Hub</p>
+        
+        <p class="center-align">
+          <strong>Arcana Solutions</strong> is focused on personal empowerment and providing insight through services like astrology, numerology, psychic readings, and past life regression. Our goal is to help individuals unlock their potential, deepen their understanding of life's challenges, and make confident decisions.
+        </p>
+
+        <p class="center-align">
+          Whether you're exploring relationships, career choices, or personal growth, <strong>Arcana Solutions</strong> offers the guidance you need to navigate your journey. In alignment with <strong>Manoveda Wellness Hub</strong>, we are committed to empowering individuals to create meaningful change and achieve lasting fulfillment.
+        </p>
+
+        <!-- Services Section -->
+        <h4 class="section-title center-align">Our Services</h4>
+
         <div class="row">
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Child Counseling</span>
-                        <p>Specialized counseling services for children with various psychological and emotional needs.</p>
-                    </div>
-                </div>
+          <!-- Service Card 1 -->
+          <div class="col s12 m6 l4">
+            <div class="card service-card">
+              <div class="card-content">
+                <span class="card-title">Akashic Record Readings</span>
+                <p>Gain deep insights into your life’s journey and uncover your true purpose.</p>
+              </div>
             </div>
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Adult Counseling</span>
-                        <p>Professional counseling services tailored to address the needs of adults facing personal or professional challenges.</p>
-                    </div>
-                </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col s12 m6 l4">
+            <div class="card service-card">
+              <div class="card-content">
+                <span class="card-title">Psychic Readings</span>
+                <p>Receive intuitive insights to guide you in relationships, career, and personal decisions.</p>
+              </div>
             </div>
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Career Counseling</span>
-                        <p>Expert guidance and support to help individuals make informed decisions about their careers.</p>
-                    </div>
-                </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col s12 m6 l4">
+            <div class="card service-card">
+              <div class="card-content">
+                <span class="card-title">Astrology & Numerology</span>
+                <p>Understand your unique strengths and life path through personalized readings.</p>
+              </div>
             </div>
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Cognitive Behavioral Therapy (CBT)</span>
-                        <p>Evidence-based therapeutic approach to address a variety of psychological issues.</p>
-                    </div>
-                </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col s12 m6 l4">
+            <div class="card service-card">
+              <div class="card-content">
+                <span class="card-title">Past Life Regression</span>
+                <p>Explore past life experiences to identify emotional patterns and gain clarity.</p>
+              </div>
             </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col s12 m6 l4">
+            <div class="card service-card">
+              <div class="card-content">
+                <span class="card-title">Mediumship</span>
+                <p>Connect with loved ones in the spirit world and receive messages that offer closure and healing.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <div class="row">
-            <div class="col s12 m6 offset-m3">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Contact Information</span>
-                        <ul class="collection">
-                            <li class="collection-item"><i class="material-icons">email</i> <a href="rudrapsychology@gmail.com">rudrapsychology@gmail.com</a></li>
-                            <li class="collection-item"><i class="material-icons">phone</i> <a href="tel:8140067306">8140067306</a></li>
-                            <li class="collection-item"><i class="material-icons">location_on</i> Bhavnagar, Gujarat</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="page-footer teal lighten-2">
-        <div class="container">
-            <p class="white-text center-align">&copy; 2024 Dr. Rudra Jani</p>
-            <div class="center-align social-icons">
-                <!-- Social media icons -->
-                <a href="#" class="white-text"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" class="white-text"><i class="fab fa-twitter-square"></i></a>
-                <a href="#" class="white-text"><i class="fab fa-instagram-square"></i></a>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; 2024 Arcana Solutions. All rights reserved.</p>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+1234567890" target="_blank">
+    <button class="whatsapp-btn">
+      <i class="material-icons">chat</i>
+    </button>
+  </a>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
+
